@@ -262,23 +262,16 @@
 
     </style>
 <script>
-    function checkSearch()
-{
-var x=document["searchInput"]["q"].value;
-if (x==null || x=="")
-  {
-  alert("Please enter search terms.");
-  return false;
+  function se() {
+    var x=document["searchInput"]["q"].value;
+    document.forms["searchInput"]["q"].value = x;
   }
-else
-  {
-  document.forms["searchInput"]["q"].value = x;    
-  }  
-}
 </script>
-<label for="site-search">Search the site:</label>
-
-<input type="search" id="site-search" name="q">
-
-<button onkeypress="return checkSearch()">Search</button>
-</form>
+ 
+  <form onsubmit="se()">   
+  <input type="text" placeholder=" Search...." name="search">   
+  <button type="submit">Submit</button>    <br>
+  <script>
+      
+  </script>
+  </form>  
