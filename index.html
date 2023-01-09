@@ -262,6 +262,21 @@
 
     </style>
 <script>
-    
+    function checkSearch()
+{
+var x=document.forms["searchInput"]["q"].value;
+if (x==null || x=="")
+  {
+  alert("Please enter search terms.");
+  return false;
+  }
+else
+  {
+  document.forms["searchInput"]["q"].value = x;    
+  }  
+}
 </script>
-<form action="https://www.ducksters.com/searchducksters.php" name="searchInput" id="cse-search-box" onsubmit="return checkSearch()">Balls</form>
+<label for="site-search">Search the site:</label>
+<input type="search" id="site-search" name="q">
+
+<button>Search</button>
