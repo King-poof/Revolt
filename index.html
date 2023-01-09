@@ -264,7 +264,7 @@
 <script>
     function checkSearch()
 {
-var x=document.forms["searchInput"]["q"].value;
+var x=document["searchInput"]["q"].value;
 if (x==null || x=="")
   {
   alert("Please enter search terms.");
@@ -277,6 +277,8 @@ else
 }
 </script>
 <label for="site-search">Search the site:</label>
+
 <input type="search" id="site-search" name="q">
 
-<button>Search</button>
+<button onkeypress="return checkSearch()">Search</button>
+</form>
